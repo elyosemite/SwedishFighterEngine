@@ -1,16 +1,27 @@
 #include <iostream>
 
-#include "SimpleExample.h"
+#include "Geometry.h"
+
+namespace MyNamespace {
+	int value = 42;
+
+	void displayvalue() {
+		std::cout << "Value: " << value << std::endl;
+	}
+}
 
 int main() {
 	std::cout << "Swedish Fighter Engine is flying in the sky." << std::endl;
 
-	SimpleExample calculator;
+	Geometry geo;
 
-	std::cout << calculator.sum(10, 10) << std::endl;
-	std::cout << calculator.divide(10, 10) << std::endl;
-	std::cout << calculator.mult(10, 10) << std::endl;
-	std::cout << calculator.subtract(10, 10) << std::endl;
+	double rectangleArea = geo.calculateRectangleArea(5, 5);
+	double circleArea = geo.calculateCircleArea(4.5);
+
+	std::cout << "Reactangle Area : " << rectangleArea << std::endl;
+	std::cout << "Circle Area : " << circleArea << std::endl;
+
+	MyNamespace::displayvalue();
 
 	return 0;
 }

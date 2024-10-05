@@ -1,10 +1,10 @@
-#ifndef SIMPLEEXAMPLE_H
-#define SIMPLEEXAMPLE_H
+#ifndef MATHOPERATIONS_H
+#define MATHOPERATIONS_H
 
-class SimpleExample
+class MathOperations
 {
 public:
-    SimpleExample();
+    MathOperations();
 
     int sum(int a, int b);
     int divide(int a, int b);
