@@ -1,3 +1,10 @@
 .vs/
 x64/
 .vscode/
+
+build/
+vcpkg_installed/
+
+CMakeUserPresets.json
+
+*.exe
