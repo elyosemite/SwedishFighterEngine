@@ -9,6 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Definir o diretório de saída para binários
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+# Adicionar subdiretórios
+add_subdirectory(MissileTrajectoryCalculation)
+
 # Incluir todos os arquivos .cpp da pasta src
 file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/*.cpp")
 
@@ -16,6 +19,7 @@ file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Adicionar diretórios de cabeçalhos
+include_directories(${PROJECT_SOURCE_DIR}/include)
 target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}")
 target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/MissileTrajectoryCalculation")
 
@@ -23,4 +27,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/Missil
 find_package(fmt CONFIG REQUIRED)
 
 # Vincular a versão header-only, se for o caso
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt-header-only)
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt-header-only MissileTrajectoryCalculation)

@@ -1,6 +1,8 @@
 #ifndef MISSILE_H
 #define MISSILE_H 
 
+#include <vector>
+
 namespace MissileTrajectory
 {
     struct Missile {

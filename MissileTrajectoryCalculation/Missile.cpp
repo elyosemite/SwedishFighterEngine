@@ -1,4 +1,6 @@
+#include <iostream>
 #include "Missile.h"
+
 
 namespace MissileTrajectory {
     double Calculation::calculateThrust(const Missile& missile, double fuelRamaining) {
