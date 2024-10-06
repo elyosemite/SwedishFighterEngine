@@ -21,7 +21,6 @@ namespace MissileTrajectory
         double y;
     };
 
-
     struct Target {
         Position currentPosition;
         double currentVelocity;
