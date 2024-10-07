@@ -1,5 +1,7 @@
 # SwedishFighterEngine - Guided Missile Control System
 
+![alt text](./assets/bg.png "SwedishFighterEngine")
+
 ## Overview
 
 Welcome to the **Guided Missile Control System**, a comprehensive software solution for simulating and controlling guided missile behavior. This system includes modules for missile trajectory calculation, target tracking, sensor simulations, and much more. It is designed to support military-grade missile control systems and is intended for research, simulation, and training purposes.
