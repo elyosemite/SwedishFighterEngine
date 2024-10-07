@@ -1,7 +1,6 @@
 #include "MathOperations.h"
 
 MathOperations::MathOperations() {
-    // Empty Constructor
 }
 
 int MathOperations::sum(int a, int b) {

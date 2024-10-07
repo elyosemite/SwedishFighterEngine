@@ -26,8 +26,7 @@ namespace MissileTrajectory
         double currentVelocity;
         double currentAcceleration;
         bool isDecoy;
-
-        // Método para verificar se o alvo é um decoy com base em padrões de movimento
+        
         bool checkIfDecoy() const {
             return isDecoy;
         }
@@ -65,9 +64,8 @@ namespace MissileTrajectory
             return snr > jammingThreshold;
         }
 
-        // Muda a frequência de radar para evitar interferência
         double nextAvailableFrequency() const {
-            return currentFrequency + 0.1;  // Exemplo simples de mudança de frequência
+            return currentFrequency + 0.1;
         }
     };
 

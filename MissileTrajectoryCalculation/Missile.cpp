@@ -12,42 +12,38 @@ namespace MissileTrajectory {
     }
 
     Position calculateTrajectory(const Missile& missile, double timeStep, double totalTime) {
-        Position pos = {0, 0};  // Posição inicial
-        double velocity = 0;    // Velocidade inicial
-        double airDensity = 1.225; // Densidade do ar ao nível do mar (kg/m³)
+        Position pos = {0, 0};
+        double velocity = 0;
+        double airDensity = 1.225;
         
         for (double t = 0; t <= totalTime; t += timeStep) {
             double thrust = calculateThrust(missile, missile.fuelMass);
             double drag = calculateDrag(missile, velocity, airDensity);
-            double netForce = thrust - drag - missile.weight * 9.81; // Inclui a força gravitacional
-            
-            // Calcula a aceleração resultante
+            double netForce = thrust - drag - missile.weight * 9.81;
             double acceleration = netForce / missile.weight;
             
-            // Atualiza a velocidade
             velocity += acceleration * timeStep;
             
-            // Atualiza a posição
-            pos.x += velocity * timeStep;  // Movimentação horizontal
-            pos.y += velocity * timeStep;  // Movimentação vertical (altitude)
+            pos.x += velocity * timeStep;
+            pos.y += velocity * timeStep;
         }
         
         return pos;
     }
 
     double calculateFuelRemaining(const Missile& Missile, double time) {
-        double fuelConsumptionRate = missile.fuelMass / missile.thrust; // Consumo de combustível por segundo
+        double fuelConsumptionRate = missile.fuelMass / missile.thrust;
         return missile.fuelMass - (fuelConsumptionRate * time);
     }
 
     double adjustTrajectoryAngle(const Missile& missile, double targetX, double targetY, const Position& position) {
         double angleToTarget = atan2(targetY - missilePos.y, targetX - missilePos.x);
-        return (angleToTarget - currentAngle) * 0.1; // Ajusta o ângulo gradualmente
+        return (angleToTarget - currentAngle) * 0.1;
     }
 
     bool checkImpact(const Position& missilePos, const Position& targetPos, double tolerance) {
         double distance = sqrt(pow(targetPos.x - missilePos.x, 2) + pow(targetPos.y - missilePos.y, 2));
-        return distance <= tolerance; // Se a distância for menor que uma tolerância, considera-se um impacto
+        return distance <= tolerance;
     }
 
     double estimateTimeToImpact(const Position& missilePos, const Position& targetPos, double velocity) {
@@ -55,19 +51,17 @@ namespace MissileTrajectory {
         return distance / velocity;
     }
 
-    // Advanced Handling Countermeasures
     bool detectFlare(const Missile& missile, const std::vector<double>& heatSources) {
         for (const auto& source : heatSources) {
             if (source.intensity > missile.sensitivityThreshold && source.speed < thresholdSpeed) {
-                return true;  // Flare detectado
+                return true;
             }
         }
-        return false; // Nenhum flare detectado
+        return false;
     }
 
     void mitigateFlareImpact(const Missile& missile, Position& targetPosition, const Position& flarePosition) {
         if (detectFlare(missile, heatSources)) {
-            // Reduz a prioridade da fonte de calor com trajetória incoerente ou intensidades suspeitas
             targetPosition = missile.previousTargetPosition;
         }
     }
