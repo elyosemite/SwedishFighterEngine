@@ -8,4 +8,6 @@ if (USE_ALPHAZONE)
     add_library(AlphaZone STATIC alphazone.cpp)
 
     target_link_libraries(Alpha PRIVATE AlphaZone)
+
+    target_include_directories(Alpha PUBLIC "../../include")
 endif()
