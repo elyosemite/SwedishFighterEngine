@@ -14,6 +14,10 @@ namespace MissileTrajectory
         double dragCoefficient;
         double crossSectionalArea;
         double fuelMass;
+
+        Missile(double w, double l, double d, double ms, double t, double dc, double csa, double fm)
+        : weight(w), length(l), diameter(d), maxSpeed(ms),
+          thrust(t), dragCoefficient(dc), crossSectionalArea(csa), fuelMass(fm) {}
     };
 
     struct Position {
@@ -91,25 +95,28 @@ namespace MissileTrajectory
 
     class Calculation {
     public:
-        double calculateThrust(const Missile& missile, double fuelRamaining);
+        // Trajectory Calculation
+        double calculateThrust(const Missile& missile, double fuelRemaining);
         double calculateDrag(const Missile& missile, double velocity, double airDensity);
         Position calculateTrajectory(const Missile& missile, double timeStep, double totalTime);
-        double calculateFuelRemaining(const Missile& Missile, double time);
-        double adjustTrajectoryAngle(const Missile& missile, double targetX, double targetY, const Position& position);
+        double calculateFuelRemaining(const Missile& missile, double time);
+        Position predictEvasiveManeuver(const Target& target, double time);
+        void adjustTrajectoryForEvasion(Missile& missile, const Target& target);
         bool checkImpact(const Position& missilePos, const Position& targetPos, double tolerance);
         double estimateTimeToImpact(const Position& missilePos, const Position& targetPos, double velocity);
 
         // Advanced Handling Countermeasures
         bool detectFlare(const Missile& missile, const std::vector<double>& heatSources);
-        void mitigateFlareImpact(Missile& missile);
-        double detectJammingSignal(const std::vector<double>& radarSignals);
-        void mitigateJamming(Missile&missile);
-        Position predictEvasiveManeuver(const Position& targetPos, const Position& previousPos);
-        void adjustForEvasiveManeuver(Missile& missile, const Position& predictedPos);
-        void adjustTrajectoryForEvasion(Missile& missile, const Target& target);
+        void mitigateFlare(const Missile& missile, Position& targetPosition, const Position& flarePosition);
+        bool detectJamming(const Radar& radar, double signalStrength, double noiseLevel);
+        void mitigateJamming(Radar& radar);
+       
         bool detectStealth(const Radar& radar, const IRScanner& irScanner, const OpticalSystem& optics);
         void mitigateStealth(Missile& missile, const Target& target, const Radar& radar, const IRScanner& irScanner);
-        void updateMissileNavigation(Missile& missile, const Target& target, Radar& radar, IRScanner& irScanner, OpticalSystem& optics, GPSReceiver& gps, InertialNavigationSystem& ins);
+        bool detectDecoy(const std::vector<Target>& targets, const Missile& missile);
+        void mitigateDecoy(Missile& missile, std::vector<Target>& targets);
+        bool detectGPSSpoofing(const GPSReceiver& gps, const InertialNavigationSystem& ins);
+        void mitigateGPSSpoofing(Missile& missile, const GPSReceiver& gps, const InertialNavigationSystem& ins);
     };
 }
 

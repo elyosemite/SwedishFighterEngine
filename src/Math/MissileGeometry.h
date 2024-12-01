@@ -1,5 +1,5 @@
-#ifndef GEOMETRY_H
-#define GEOMETRY_H
+#ifndef MISSILEGEOMETRY_H
+#define MISSILEGEOMETRY_H
 
 #include "MathOperations.h"
 

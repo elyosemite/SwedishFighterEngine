@@ -8,3 +8,5 @@ vcpkg_installed/
 CMakeUserPresets.json
 
 *.exe
+*.vcxproj.user
+*.vcxproj.filters
