@@ -9,5 +9,5 @@ if (USE_ALPHAZONE)
 
     target_link_libraries(Alpha PRIVATE AlphaZone)
 
-    target_include_directories(Alpha PUBLIC "../../include")
+    target_include_directories(Alpha INTERFACE "../../include")
 endif()

@@ -17,14 +17,14 @@ int main() {
 	Beta::BetaComponent betaComponent(58, "ExampleComponent beta");
 	Beta::BetaUseCase betaUseCase;
 
-	std::cout  << "Executing Beta module for preparing missiles system" << betaUseCase.calculate(betaComponent, true) << std::endl;
+	std::cout  << "Executing Beta module for preparing missiles system: " << betaUseCase.calculate(betaComponent, true) << std::endl;
 
 	// Gamma module
 
 	Gamma::GammaComponent gammaComponent(38, "ExampleComponent gamma");
 	Gamma::GammaUseCase gammaUseCase;
 
-	std::cout  << "Executing Gamma module for stripe our targets" << gammaUseCase.calculate(gammaComponent, true) << std::endl;
+	std::cout  << "Executing Gamma module for stripe our targets: " << gammaUseCase.calculate(gammaComponent, true) << std::endl;
 
 	return 0;
 }

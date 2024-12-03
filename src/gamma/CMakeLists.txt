@@ -1,2 +1,2 @@
 add_library(Gamma gamma.cpp)
-target_include_directories(Gamma PUBLIC "../../include")
+target_include_directories(Gamma INTERFACE "../../include")
