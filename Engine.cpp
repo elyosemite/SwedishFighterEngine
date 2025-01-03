@@ -1,30 +1,57 @@
 #include <iostream>
+#include <cmath>
+#include <vector>
 
 #include <alpha/alpha.h>
 #include <beta/beta.h>
 #include <gamma/gamma.h>
 
-int main() {
-	// Alpha module
+template <typename T>
+T calcularJurosCompostos(T principal, T taxa, int periodo)
+{
+	return principal * std::pow(1 + taxa, periodo);
+}
 
-	Alpha::AlphaComponent alphaComponent(42, "ExampleComponent alpha");
-	Alpha::AlphaUseCase alphaUseCase;
+template <typename T>
+class Portfolio
+{
+private:
+	std::vector<T> investimentos;
 
-	std::cout << "Executing Alpha module for searching target: " << alphaUseCase.calculate(alphaComponent, true) << std::endl;
+public:
+	void adicionarInvestimento(const T& investimento)
+	{
+		investimentos.push_back(investimento);
+	}
 
-	// Beta module
+	void mostrarInvestimentos() const
+	{
+		for (auto &investimento : investimentos)
+		{
+			std::cout << investimento << std::endl;
+		}
+	}
+};
 
-	Beta::BetaComponent betaComponent(58, "ExampleComponent beta");
-	Beta::BetaUseCase betaUseCase;
+int main()
+{
+	double principal = 1000.0;
+	double taxa = 0.05;
+	int periodo = 10;
 
-	std::cout  << "Executing Beta module for preparing missiles system: " << betaUseCase.calculate(betaComponent, true) << std::endl;
+	double resultado = calcularJurosCompostos(principal, taxa, periodo);
+	std::cout << "Montante final: " << resultado << std::endl;
 
-	// Gamma module
+	// Template com classes
+	Portfolio<std::string> portfolio;
 
-	Gamma::GammaComponent gammaComponent(38, "ExampleComponent gamma");
-	Gamma::GammaUseCase gammaUseCase;
+	portfolio.adicionarInvestimento("Ação AAPL");
+	portfolio.adicionarInvestimento("Título: Tesouro Direto");
+	portfolio.adicionarInvestimento("Criptomoeda: Bitcoin");
 
-	std::cout  << "Executing Gamma module for stripe our targets: " << gammaUseCase.calculate(gammaComponent, true) << std::endl;
+	std::cout << "Investimentos no Portfolio:" << std::endl;
+
+	portfolio.mostrarInvestimentos();
 
 	return 0;
 }

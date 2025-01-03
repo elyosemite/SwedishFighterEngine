@@ -90,7 +90,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -109,10 +109,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,7 +120,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>src\MissileTrajectoryCalculation\Debug\MissileTrajectoryCalculation.lib;src\alpha\Debug\Alpha.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>src\MissileTrajectoryCalculation\Debug\MissileTrajectoryCalculation.lib;src\alpha\Debug\Alpha.lib;src\beta\Debug\Beta.lib;src\gamma\Debug\Gamma.lib;src\alpha\Debug\AlphaZone.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -135,7 +135,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -155,10 +155,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -166,7 +166,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>src\MissileTrajectoryCalculation\Release\MissileTrajectoryCalculation.lib;src\alpha\Release\Alpha.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>src\MissileTrajectoryCalculation\Release\MissileTrajectoryCalculation.lib;src\alpha\Release\Alpha.lib;src\beta\Release\Beta.lib;src\gamma\Release\Gamma.lib;src\alpha\Release\AlphaZone.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -181,7 +181,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -201,10 +201,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -212,7 +212,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>src\MissileTrajectoryCalculation\MinSizeRel\MissileTrajectoryCalculation.lib;src\alpha\MinSizeRel\Alpha.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>src\MissileTrajectoryCalculation\MinSizeRel\MissileTrajectoryCalculation.lib;src\alpha\MinSizeRel\Alpha.lib;src\beta\MinSizeRel\Beta.lib;src\gamma\MinSizeRel\Gamma.lib;src\alpha\MinSizeRel\AlphaZone.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -227,7 +227,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -246,10 +246,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\,;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alfredo\Projects\SwedishFighterEngine;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\..\..\include;C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -257,7 +257,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>src\MissileTrajectoryCalculation\RelWithDebInfo\MissileTrajectoryCalculation.lib;src\alpha\RelWithDebInfo\Alpha.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>src\MissileTrajectoryCalculation\RelWithDebInfo\MissileTrajectoryCalculation.lib;src\alpha\RelWithDebInfo\Alpha.lib;src\beta\RelWithDebInfo\Beta.lib;src\gamma\RelWithDebInfo\Gamma.lib;src\alpha\RelWithDebInfo\AlphaZone.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -340,6 +340,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\Alpha.vcxproj">
       <Project>{838E4C18-1CD8-339F-BF37-02792EFEBC8D}</Project>
       <Name>Alpha</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Alfredo\Projects\SwedishFighterEngine\src\alpha\AlphaZone.vcxproj">
+      <Project>{73ECCFF0-A3AA-3B95-B0B4-C0CA5E8DC3A7}</Project>
+      <Name>AlphaZone</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Alfredo\Projects\SwedishFighterEngine\src\beta\Beta.vcxproj">
+      <Project>{BEFCB87F-F077-3E9C-8AE4-65B8F995AD4A}</Project>
+      <Name>Beta</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Alfredo\Projects\SwedishFighterEngine\src\gamma\Gamma.vcxproj">
+      <Project>{1929DAA0-9725-379D-AF79-EFC272C9958C}</Project>
+      <Name>Gamma</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Alfredo\Projects\SwedishFighterEngine\src\MissileTrajectoryCalculation\MissileTrajectoryCalculation.vcxproj">
       <Project>{959590D5-C9BE-337D-AC11-49FFA0829788}</Project>
