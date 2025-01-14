@@ -5,6 +5,7 @@
 #include <alpha/alpha.h>
 #include <beta/beta.h>
 #include <gamma/gamma.h>
+#include <concurrency/concurrency.h>
 
 template <typename T>
 T calcularJurosCompostos(T principal, T taxa, int periodo)
@@ -39,15 +40,18 @@ int main()
 	double taxa = 0.05;
 	int periodo = 10;
 
+	Concurrency::Thams thams;
+	thams.Foo();
+
 	double resultado = calcularJurosCompostos(principal, taxa, periodo);
 	std::cout << "Montante final: " << resultado << std::endl;
 
 	// Template com classes
 	Portfolio<std::string> portfolio;
 
-	portfolio.adicionarInvestimento("Ação AAPL");
-	portfolio.adicionarInvestimento("Título: Tesouro Direto");
-	portfolio.adicionarInvestimento("Criptomoeda: Bitcoin");
+	portfolio.adicionarInvestimento("Asset: AAPL");
+	portfolio.adicionarInvestimento("treasury bond: Tesouro Direto");
+	portfolio.adicionarInvestimento("Cryptocurrency: Bitcoin");
 
 	std::cout << "Investimentos no Portfolio:" << std::endl;
 
